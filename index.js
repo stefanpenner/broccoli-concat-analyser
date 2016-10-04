@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+'use strict';
+
 var walk = require('walk-sync')
 var fs = require('fs');
 var path = require('path');
