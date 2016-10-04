@@ -25,7 +25,7 @@ function summarize(summaryPath) {
 
   summary.files = Object.keys(sizes).map(function(relativePath) {
     var content = fs.readFileSync(path.join(concatStatsForPath, basename, relativePath), 'UTF8');
-    var uglified;
+    var uglified, compressed;
 
       if (/\.js$/.test(relativePath)) {
         uglified = Uglify.minify(content, { fromString: true });
