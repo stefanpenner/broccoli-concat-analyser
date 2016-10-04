@@ -8,11 +8,11 @@ produces:
 
 ## usage
 
+0. `npm install -g broccoli-concat-analyser`
 1. using broccoli-concat (latest versions)
-2. CONCAT_STATS=true ember s
-3. broccoli-concat-analyser ./concat-stats-for
+2. `CONCAT_STATS=true ember s`
+3. `broccoli-concat-analyser ./concat-stats-for`
 4. look at .out.json files in ./concat-stats-for for the process output
-
 
 ## Features
 
