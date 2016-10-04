@@ -1,5 +1,6 @@
 {
   "name": "broccoli-concat-analizer",
+  "bin" : { "broccoli-concat-analyser": "./index.js" },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
