@@ -29,6 +29,7 @@
   "homepage": "https://github.com/stefanpenner/broccoli-concat-analyser#readme",
   "dependencies": {
     "cpr": "^2.0.0",
+    "filesize": "^3.3.0",
     "ora": "^0.3.0",
     "uglify-js": "^2.7.3",
     "walk-sync": "^0.3.1"

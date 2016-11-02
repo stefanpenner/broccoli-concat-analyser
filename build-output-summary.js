@@ -1,10 +1,11 @@
 var walkSync = require('walk-sync');
 var fs = require('fs');
+var filesize = require('filesize');
 
 function prepareFiles(files) {
   let total = 0;
 
-  files.forEach(x => x.label = x.relativePath);
+  files.forEach(x => x.label = x.relativePath + ' (' + filesize(x.sizes.compressed) + ')');
   files.forEach(x => total+= x.sizes.compressed);
   files.forEach(x => x.weight = x.sizes.compressed / total);
 
@@ -25,6 +26,8 @@ function formatOut(out) {
     out.sizes.uglified += group.sizes.uglified
     out.sizes.compressed += group.sizes.compressed
   });
+
+  out.label += ' (' + filesize(out.sizes.compressed) + ')';
 
   return out;
 }
