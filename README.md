@@ -8,6 +8,8 @@ produces:
 
 ![Example](https://cloud.githubusercontent.com/assets/1377/19917272/efe1027a-a07e-11e6-9097-0a9a121d3dd2.png)
 
+[Interactive Demo](http://static.iamstef.net/concat-stats-example/)
+
 ## usage
 
 0. `npm install -g broccoli-concat-analyser`
