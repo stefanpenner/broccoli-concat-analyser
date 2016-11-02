@@ -1,0 +1,86 @@
+<!-- largely stollen from: https://github.com/th0r/webpack-bundle-analyzer -->
+<script src="_assets/foamtree-3.4.4/carrotsearch.foamtree.js"></script>
+<script src="_assets/tooltip.js"></script>
+<body>
+  <div id="visualization" style="width: 100%; height: 100%"></div>
+  <style>
+html, body, .visualization {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.tooltip {
+  font: normal 10px Verdana;
+  visibility: hidden;
+  position: absolute;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #aaa;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+  </style>
+  <script src="./_assets/carrotsearch.foamtree.js"></script>
+  <script src="./_assets/filesize.js"></script>
+  <script src="./summary.js"></script>
+  <script>
+'use strict';
+
+  window.addEventListener('load', function() {
+    Tooltip.init();
+
+    function preventDefault(event) {
+      event.preventDefault();
+    }
+
+    var foamtree = new CarrotSearchFoamTree({
+      id: 'visualization',
+
+      layout: 'squarified',
+      stacking: 'flattened',
+
+      maxGroupLevelsDrawn: Number.MAX_VALUE,
+      maxGroupLabelLevelsDrawn: Number.MAX_VALUE,
+      groupLabelVerticalPadding: 0.2,
+      rolloutDuration: 0,
+      pullbackDuration: 0,
+      fadeDuration: 0,
+      zoomMouseWheelDuration: 300,
+      openCloseDuration: 200,
+      titleBarDecorator(opts, props, vars) {
+        vars.titleBarShown = false;
+      },
+
+      onGroupClick(event) {
+        preventDefault(event);
+        zoomOutDisabled = false;
+        foamtree.zoom(event.group);
+      },
+
+      onGroupDoubleClick: preventDefault,
+
+      onGroupHover(event) {
+        var group = event.group;
+
+        if (group) {
+          Tooltip.show(
+              '<b>' +          group.label + '</b><br>' +
+              'raw: ' +        filesize(group.sizes.raw) + ' <br> ' +
+              'uglified: ' +   filesize(group.sizes.uglified) + ' <br> ' +
+              'compressed: ' + filesize(group.sizes.compressed) + ' <br> '
+              );
+        } else {
+          Tooltip.hide();
+        }
+      },
+
+      dataObject: SUMMARY,
+    });
+    window.addEventListener('resize',foamtree.resize);
+  });
+  </script>
+</body>
