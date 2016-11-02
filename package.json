@@ -15,6 +15,14 @@
   },
   "author": "",
   "license": "ISC",
+  "files": [
+    "build-output-summary.js",
+    "index.js",
+    "output/index.html",
+    "output/_assets/carrotsearch.foamtree.js",
+    "output/_assets/filesize.js",
+    "output/_assets/tooltip.js"
+  ],
   "bugs": {
     "url": "https://github.com/stefanpenner/broccoli-concat-analyser/issues"
   },
