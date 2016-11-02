@@ -8,7 +8,7 @@ var Uglify = require('uglify-js');
 var zlib = require('zlib');
 var ora = require('ora');
 var concatStatsForPath = process.argv[2];
-
+var buildOuputSummary = require('./build-output-summary');
 var usage = "using concat-stats:\n" + "   node concat-stats <path-to-concat-stats-directory>";
 if (!concatStatsForPath) {
   console.log(usage);
@@ -57,4 +57,18 @@ entries.forEach(function(entry) {
 });
 
 spinner.text = 'complete, checkout: ' + concatStatsForPath + '*.out.json';
-spinner.stopAndPersist();
+var cpr = require('cpr').cpr; //Back compat
+
+cpr(__dirname + '/output', concatStatsForPath, {
+  overwrite: true, //If the file exists, overwrite it
+}, function(err, files) {
+  spinner.stopAndPersist();
+  if (err) { console.error(err); return }
+
+  fs.writeFileSync(concatStatsForPath + '/summary.js', ' var SUMMARY = ' + JSON.stringify(buildOuputSummary(process.cwd() + '/concat-stats-for/'), null, 2));
+  console.log('visit file://' + process.cwd() + '/concat-stats-for/index.html');
+    //err - The error if any (err.list might be available with an array of errors for more detailed information)
+    //files - List of files that we copied
+});
+
+
