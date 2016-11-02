@@ -6,6 +6,8 @@ produces:
 * uglified size (for JS right now)
 * compressed size (including uglify if applicable)
 
+![Example](https://cloud.githubusercontent.com/assets/1377/19917272/efe1027a-a07e-11e6-9097-0a9a121d3dd2.png)
+
 ## usage
 
 0. `npm install -g broccoli-concat-analyser`
