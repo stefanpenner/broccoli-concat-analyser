@@ -34,6 +34,14 @@ html, body, .visualization {
   window.addEventListener('load', function() {
     Tooltip.init();
 
+    function filesizeOrNan(size) {
+      if (isNaN(size)) {
+        return 'N/A';
+      } else {
+        return filesize(size);
+      }
+    }
+
     function preventDefault(event) {
       event.preventDefault();
     }
@@ -72,9 +80,9 @@ html, body, .visualization {
         if (group) {
           Tooltip.show(
               '<b>' +          group.label + '</b><br>' +
-              'raw: ' +        filesize(group.sizes.raw) + ' <br> ' +
-              'uglified: ' +   filesize(group.sizes.uglified) + ' <br> ' +
-              'compressed: ' + filesize(group.sizes.compressed) + ' <br> '
+              'raw: ' +        filesizeOrNan(group.sizes.raw) + ' <br> ' +
+              'uglified: ' +   filesizeOrNan(group.sizes.uglified) + ' <br> ' +
+              'compressed: ' + filesizeOrNan(group.sizes.compressed) + ' <br> '
               );
         } else {
           Tooltip.hide();
