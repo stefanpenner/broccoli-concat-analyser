@@ -10,7 +10,7 @@ produces:
 * uglified size (for JS right now)
 * compressed size (including uglify if applicable)
 
-![Example](https://cloud.githubusercontent.com/assets/1377/19917272/efe1027a-a07e-11e6-9097-0a9a121d3dd2.png)
+![Example](https://user-images.githubusercontent.com/1325249/27770900-14ecfd58-5f47-11e7-8165-f44cb0ac2130.png)
 
 [Interactive Demo](http://static.iamstef.net/concat-stats-example/)
 
