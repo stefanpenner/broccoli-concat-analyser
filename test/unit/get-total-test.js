@@ -1,3 +1,5 @@
+'use strict';
+
 const expect = require('chai').expect;
 const getTotal = require('../../src/get-total');
 

@@ -1,3 +1,5 @@
+'use strict';
+
 function createGroups(path, groups) {
   if (path.length === 0) {
     return groups;
@@ -22,7 +24,8 @@ function createGroups(path, groups) {
   return createGroups(remainingPath, foundGroup.groups);
 }
 
-function groupFiles(files) {
+
+module.exports = function groupFiles(files) {
   let pathHash = {};
   let groups = [];
 
@@ -52,5 +55,3 @@ function groupFiles(files) {
 
   return groups;
 }
-
-module.exports = groupFiles;

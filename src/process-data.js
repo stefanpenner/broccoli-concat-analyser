@@ -1,9 +1,11 @@
+'use strict';
+
 const filesize = require('filesize');
 const getTotal = require('./get-total');
 const groupFiles = require('./group-files');
 const amendGroupStats = require('./amend-group-stats');
 
-function processData(outJson) {
+module.exports = function processData(outJson) {
   let total = getTotal(outJson.files, 'compressed');
   let groups = groupFiles(outJson.files);
   groups.forEach(group => amendGroupStats(group, total));
@@ -18,6 +20,4 @@ function processData(outJson) {
       compressed: total
     }
   };
-}
-
-module.exports = processData;
+};
