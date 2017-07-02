@@ -36,21 +36,32 @@ describe('process-data', function() {
       groups: [
         {
           sizes: {
-            raw: 100,
-            uglified: 80,
-            compressed: 70
+            raw: 8100,
+            uglified: 4080,
+            compressed: 1570
           },
-          label: 'foo/bar.js (70 B)',
-          weight: 0.044585987261146494
-        },
-        {
-          sizes: {
-            raw: 8000,
-            uglified: 4000,
-            compressed: 1500
-          },
-          label: 'foo/baz.js (1.46 KB)',
-          weight: 0.9554140127388535
+          label: 'foo (1.53 KB)',
+          weight: 1,
+          groups: [
+            {
+              sizes: {
+                raw: 100,
+                uglified: 80,
+                compressed: 70
+              },
+              label: 'bar.js (70 B)',
+              weight: 0.044585987261146494
+            },
+            {
+              sizes: {
+                raw: 8000,
+                uglified: 4000,
+                compressed: 1500
+              },
+              label: 'baz.js (1.46 KB)',
+              weight: 0.9554140127388535
+            }
+          ]
         }
       ]
     };
