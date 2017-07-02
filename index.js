@@ -4,7 +4,7 @@
 var walk = require('walk-sync')
 var fs = require('fs');
 var path = require('path');
-var Uglify = require('uglify-js');
+var Uglify = require('uglify-es');
 var zlib = require('zlib');
 var ora = require('ora');
 var concatStatsForPath = process.argv[2];
@@ -28,7 +28,7 @@ function summarize(summaryPath) {
     var uglified, compressed;
 
       if (/\.js$/.test(relativePath)) {
-        uglified = Uglify.minify(content, { fromString: true });
+        uglified = Uglify.minify(content);
         compressed = zlib.deflateSync(uglified.code, { level: 9 });
       } else {
         uglified = { code: { length: 'N/A'}};
