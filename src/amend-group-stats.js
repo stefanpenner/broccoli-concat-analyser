@@ -1,7 +1,9 @@
+'use strict';
+
 const filesize = require('filesize');
 const getTotal = require('./get-total');
 
-function amendGroupStats(group, totalSize) {
+module.exports = function amendGroupStats(group, totalSize) {
   let groupTotal;
 
   if (group.sizes) {
@@ -24,6 +26,4 @@ function amendGroupStats(group, totalSize) {
 
   group.label += ` (${filesize(groupTotal)})`;
   group.weight = groupTotal / totalSize;
-}
-
-module.exports = amendGroupStats;
+};

@@ -1,3 +1,5 @@
+'use strict';
+
 const expect = require('chai').expect;
 const processData = require('../../src/process-data');
 
@@ -68,5 +70,4 @@ describe('process-data', function() {
 
     expect(processData(json)).to.deep.equal(expected);
   });
-
 });
