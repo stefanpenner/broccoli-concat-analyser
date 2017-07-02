@@ -1,5 +1,9 @@
 # broccoli-concat-analyser
 
+[![Build Status](https://travis-ci.org/stefanpenner/broccoli-concat-analyser.svg?branch=master)](https://travis-ci.org/stefanpenner/broccoli-concat-analyser)
+
+---
+
 produces:
 
 * raw size
