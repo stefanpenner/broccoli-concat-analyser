@@ -8,7 +8,7 @@ var Uglify = require('uglify-js');
 var zlib = require('zlib');
 var ora = require('ora');
 var concatStatsForPath = process.argv[2];
-var buildOuputSummary = require('./build-output-summary');
+var buildOuputSummary = require('./src/build-output-summary');
 var usage = "using concat-stats:\n" + "   node concat-stats <path-to-concat-stats-directory>";
 if (!concatStatsForPath) {
   console.log(usage);
