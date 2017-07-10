@@ -1,11 +1,11 @@
 {
   "name": "broccoli-concat-analyser",
   "bin": {
-    "broccoli-concat-analyser": "./index.js"
+    "broccoli-concat-analyser": "lib/cli.js"
   },
   "version": "2.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha --recursive test"
   },

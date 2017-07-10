@@ -1,7 +1,7 @@
 'use strict';
 
 const expect = require('chai').expect;
-const processData = require('../../src/process-data');
+const processData = require('../../lib/process-data');
 
 describe('process-data', function() {
 
