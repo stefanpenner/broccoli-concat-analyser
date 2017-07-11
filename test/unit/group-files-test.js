@@ -1,5 +1,7 @@
 'use strict';
-const expect = require('chai').expect; const groupFiles = require('../../src/group-files');
+
+const expect = require('chai').expect;
+const groupFiles = require('../../lib/group-files');
 
 describe('group-files', function() {
 
