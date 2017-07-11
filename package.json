@@ -3,7 +3,7 @@
   "bin": {
     "broccoli-concat-analyser": "lib/cli.js"
   },
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
