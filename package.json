@@ -28,7 +28,8 @@
   },
   "devDependencies": {
     "chai": "^4.0.2",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "mocha-eslint": "^4.0.0"
   },
   "engines": {
     "node": ">= 4.0.0"
