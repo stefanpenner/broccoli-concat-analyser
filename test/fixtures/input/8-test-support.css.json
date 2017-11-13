@@ -1,0 +1,7 @@
+{
+  "outputFile": "/assets/test-support.css",
+  "sizes": {
+    "vendor/qunit/qunit.css": 7875,
+    "vendor/ember-qunit/test-container-styles.css": 544
+  }
+}

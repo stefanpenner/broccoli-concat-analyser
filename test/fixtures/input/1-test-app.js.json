@@ -1,0 +1,12 @@
+{
+  "outputFile": "/assets/test-app.js",
+  "sizes": {
+    "test-app/app.js": 606,
+    "test-app/initializers/app-version.js": 510,
+    "test-app/initializers/container-debug-adapter.js": 590,
+    "test-app/initializers/export-application-global.js": 1377,
+    "test-app/resolver.js": 231,
+    "test-app/router.js": 425,
+    "test-app/templates/application.js": 399
+  }
+}
