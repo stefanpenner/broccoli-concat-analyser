@@ -1,0 +1,61 @@
+{
+  "outputFile": "/assets/test-app.js",
+  "files": [
+    {
+      "relativePath": "test-app/app.js",
+      "sizes": {
+        "raw": 606,
+        "uglified": 375,
+        "compressed": 227
+      }
+    },
+    {
+      "relativePath": "test-app/initializers/app-version.js",
+      "sizes": {
+        "raw": 510,
+        "uglified": 311,
+        "compressed": 216
+      }
+    },
+    {
+      "relativePath": "test-app/initializers/container-debug-adapter.js",
+      "sizes": {
+        "raw": 590,
+        "uglified": 428,
+        "compressed": 240
+      }
+    },
+    {
+      "relativePath": "test-app/initializers/export-application-global.js",
+      "sizes": {
+        "raw": 1377,
+        "uglified": 684,
+        "compressed": 376
+      }
+    },
+    {
+      "relativePath": "test-app/resolver.js",
+      "sizes": {
+        "raw": 231,
+        "uglified": 154,
+        "compressed": 131
+      }
+    },
+    {
+      "relativePath": "test-app/router.js",
+      "sizes": {
+        "raw": 425,
+        "uglified": 264,
+        "compressed": 193
+      }
+    },
+    {
+      "relativePath": "test-app/templates/application.js",
+      "sizes": {
+        "raw": 399,
+        "uglified": 322,
+        "compressed": 239
+      }
+    }
+  ]
+}
