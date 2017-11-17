@@ -6,7 +6,7 @@
       "sizes": {
         "raw": 606,
         "uglified": 375,
-        "compressed": 227
+        "compressed": 119.82860520094562
       }
     },
     {
@@ -14,7 +14,7 @@
       "sizes": {
         "raw": 510,
         "uglified": 311,
-        "compressed": 216
+        "compressed": 99.37785657998424
       }
     },
     {
@@ -22,7 +22,7 @@
       "sizes": {
         "raw": 590,
         "uglified": 428,
-        "compressed": 240
+        "compressed": 136.76438140267928
       }
     },
     {
@@ -30,7 +30,7 @@
       "sizes": {
         "raw": 1377,
         "uglified": 684,
-        "compressed": 376
+        "compressed": 218.56737588652481
       }
     },
     {
@@ -38,7 +38,7 @@
       "sizes": {
         "raw": 231,
         "uglified": 154,
-        "compressed": 131
+        "compressed": 49.20961386918834
       }
     },
     {
@@ -46,7 +46,7 @@
       "sizes": {
         "raw": 425,
         "uglified": 264,
-        "compressed": 193
+        "compressed": 84.35933806146572
       }
     },
     {
@@ -54,7 +54,7 @@
       "sizes": {
         "raw": 399,
         "uglified": 322,
-        "compressed": 239
+        "compressed": 102.89282899921197
       }
     }
   ]
