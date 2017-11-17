@@ -26,7 +26,7 @@ describe('get-total', function() {
     expect(getTotal(files)).to.equal(1570);
   });
 
-  it('gets any total size of all files', function() {
+  it('gets total raw size of all files', function() {
     let files = [
       {
         sizes: {
@@ -45,6 +45,25 @@ describe('get-total', function() {
     ];
 
     expect(getTotal(files, 'raw')).to.equal(8100);
+  });
+
+  it('ignores non-existing size key', function() {
+    let files = [
+      {
+        sizes: {
+          raw: 100,
+          compressed: 70
+        }
+      },
+      {
+        sizes: {
+          raw: 8000,
+          compressed: 1500
+        }
+      }
+    ];
+
+    expect(getTotal(files, 'uglified')).to.be.NaN;
   });
 
 });

@@ -34,8 +34,8 @@ html, body, .visualization {
   window.addEventListener('load', function() {
     Tooltip.init();
 
-    function filesizeOrNan(size) {
-      if (isNaN(size)) {
+    function formatSize(size) {
+      if (size === undefined || isNaN(size)) {
         return 'N/A';
       } else {
         return filesize(size);
@@ -80,9 +80,9 @@ html, body, .visualization {
         if (group) {
           Tooltip.show(
               '<b>' +          group.label + '</b><br>' +
-              'raw: ' +        filesizeOrNan(group.sizes.raw) + ' <br> ' +
-              'uglified: ' +   filesizeOrNan(group.sizes.uglified) + ' <br> ' +
-              'compressed: ' + filesizeOrNan(group.sizes.compressed) + ' <br> '
+              'raw: ' +        formatSize(group.sizes.raw) + ' <br> ' +
+              'uglified: ' +   formatSize(group.sizes.uglified) + ' <br> ' +
+              'compressed: ' + formatSize(group.sizes.compressed) + ' <br> '
               );
         } else {
           Tooltip.hide();
