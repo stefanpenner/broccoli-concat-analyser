@@ -11,4 +11,5 @@ define('test-app/initializers/app-version', ['exports', 'ember-cli-app-version/i
     name: 'App Version',
     initialize: (0, _initializerFactory.default)(name, version)
   };
-});
+
+})
