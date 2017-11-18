@@ -108,16 +108,6 @@
       "rank": 0.26324926030513013
     },
     {
-      "label": "/assets/vendor.css (0 B)",
-      "groups": [],
-      "sizes": {
-        "raw": 0,
-        "uglified": 0,
-        "compressed": 0
-      },
-      "rank": 0
-    },
-    {
       "label": "/assets/test-support.css (2.22 KB)",
       "groups": [
         {
