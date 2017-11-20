@@ -43,7 +43,7 @@ describe('process-data', function() {
             compressed: 1570
           },
           label: 'foo (1.53 KB)',
-          weight: 1,
+          weight: 1570,
           groups: [
             {
               sizes: {
@@ -52,7 +52,7 @@ describe('process-data', function() {
                 compressed: 70
               },
               label: 'bar.js (70 B)',
-              weight: 0.044585987261146494
+              weight: 70
             },
             {
               sizes: {
@@ -61,7 +61,7 @@ describe('process-data', function() {
                 compressed: 1500
               },
               label: 'baz.js (1.46 KB)',
-              weight: 0.9554140127388535
+              weight: 1500
             }
           ]
         }
