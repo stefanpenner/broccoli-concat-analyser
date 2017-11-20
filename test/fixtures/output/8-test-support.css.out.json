@@ -5,7 +5,6 @@
       "relativePath": "vendor/qunit/qunit.css",
       "sizes": {
         "raw": 7875,
-        "uglified": "N/A",
         "compressed": 2123.0700712589073
       }
     },
@@ -13,7 +12,6 @@
       "relativePath": "vendor/ember-qunit/test-container-styles.css",
       "sizes": {
         "raw": 544,
-        "uglified": "N/A",
         "compressed": 146.6603325415677
       }
     }

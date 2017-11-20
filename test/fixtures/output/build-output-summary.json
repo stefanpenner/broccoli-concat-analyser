@@ -129,7 +129,6 @@
                 {
                   "sizes": {
                     "raw": 7875,
-                    "uglified": "N/A",
                     "compressed": 2123.0700712589073
                   },
                   "label": "qunit.css (2.07 KB)",
@@ -138,7 +137,6 @@
               ],
               "sizes": {
                 "raw": 7875,
-                "uglified": "N/A0",
                 "compressed": 2123.0700712589073
               },
               "weight": 0.9353842499109158
@@ -149,7 +147,6 @@
                 {
                   "sizes": {
                     "raw": 544,
-                    "uglified": "N/A",
                     "compressed": 146.6603325415677
                   },
                   "label": "test-container-styles.css (147 B)",
@@ -158,7 +155,6 @@
               ],
               "sizes": {
                 "raw": 544,
-                "uglified": "N/A0",
                 "compressed": 146.6603325415677
               },
               "weight": 0.06461575008908421
@@ -166,7 +162,6 @@
           ],
           "sizes": {
             "raw": 8419,
-            "uglified": "N/A0N/A00",
             "compressed": 2269.730403800475
           },
           "weight": 1
@@ -174,7 +169,6 @@
       ],
       "sizes": {
         "raw": 8419,
-        "uglified": "N/AN/A0",
         "compressed": 2269.730403800475
       },
       "rank": 0.7367507396948698
