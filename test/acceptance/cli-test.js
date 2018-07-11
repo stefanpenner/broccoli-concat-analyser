@@ -77,12 +77,8 @@ describe('CLI', function() {
 
         // copies static output files
         expect(file(path.join(outPath, 'index.html'))).to.exist;
-        expect(file(path.join(outPath, '_assets/carrotsearch.foamtree.js'))).to.exist;
-        expect(file(path.join(outPath, '_assets/filesize.js'))).to.exist;
-        expect(file(path.join(outPath, '_assets/tooltip.js'))).to.exist;
 
-        // generates summary.js
-        expect(file(path.join(outPath, 'summary.js'))).to.equal(file(path.join(outputFixturePath, 'summary.js')));
+        expect(fs.readFileSync(`${outPath}/index.html`, 'UTF8')).to.contain('var SUMMARY = {');
       });
   });
 
