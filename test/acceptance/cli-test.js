@@ -8,6 +8,7 @@ const file = chaiFiles.file;
 const path = require('path');
 const cp = require('child_process');
 const fs = require('fs-extra');
+const validate = require('html-validator');
 const copyFixtures = require('../helpers/copy-fixtures');
 
 const inputFixturePath = 'test/fixtures/input';
@@ -78,7 +79,20 @@ describe('CLI', function() {
         // copies static output files
         expect(file(path.join(outPath, 'index.html'))).to.exist;
 
-        expect(fs.readFileSync(`${outPath}/index.html`, 'UTF8')).to.contain('var SUMMARY = {');
+        let data = fs.readFileSync(`${outPath}/index.html`, 'UTF8');
+        expect(data).to.contain('var SUMMARY = {');
+
+        return validate({
+          data,
+          format: 'json'
+        })
+          .then(response => {
+            let error = response.messages.find(msg => msg.type === 'error');
+            if (error) {
+              throw new Error(`HTML validation error in index.html at L${error.lastLine}:${error.firstColumn}-${error.lastColumn}: ${error.message}\n${error.extract}`);
+            }
+
+          })
       });
   });
 
