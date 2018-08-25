@@ -30,9 +30,8 @@ describe('summarize', function() {
       let outputFile = '1-test-app.js.out.json';
 
       copyFixtures(inputFile, inputFixturePath, tmpPath);
-      summarize(path.join(tmpPath, `${inputFile}.json`));
-
-      expect(file(path.join(tmpPath, outputFile))).to.equal(file(path.join(outputFixturePath, outputFile)));
+      return summarize(path.join(tmpPath, `${inputFile}.json`))
+        .then(() => expect(file(path.join(tmpPath, outputFile))).to.equal(file(path.join(outputFixturePath, outputFile))));
     });
 
   });
@@ -43,12 +42,13 @@ describe('summarize', function() {
       let inputFiles = ['1-test-app.js', '3-vendor.css', '8-test-support.css'];
 
       copyFixtures(inputFiles, inputFixturePath, tmpPath);
-      summarizeAll(tmpPath);
-
-      inputFiles.forEach((inputFile) => {
-        let outputFile = `${inputFile}.out.json`;
-        expect(file(path.join(tmpPath, outputFile))).to.equal(file(path.join(outputFixturePath, outputFile)));
-      });
+      return summarizeAll(tmpPath)
+        .then(() => {
+          inputFiles.forEach((inputFile) => {
+            let outputFile = `${inputFile}.out.json`;
+            expect(file(path.join(tmpPath, outputFile))).to.equal(file(path.join(outputFixturePath, outputFile)));
+          });
+        });
     });
 
   });
