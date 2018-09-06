@@ -23,7 +23,9 @@
     "filesize": "^3.3.0",
     "ora": "^0.3.0",
     "uglify-es": "^3.0.23",
-    "walk-sync": "^0.3.1"
+    "walk-sync": "^0.3.1",
+    "workerpool": "^2.3.1",
+    "zlib": "^1.0.5"
   },
   "devDependencies": {
     "chai": "^4.0.2",
