@@ -21,7 +21,9 @@
   "homepage": "https://github.com/stefanpenner/broccoli-concat-analyser#readme",
   "dependencies": {
     "filesize": "^3.3.0",
+    "fs-extra": "^4.0.2",
     "ora": "^0.3.0",
+    "pify": "^4.0.0",
     "uglify-es": "^3.0.23",
     "walk-sync": "^0.3.1",
     "workerpool": "^2.3.1",
@@ -30,7 +32,6 @@
   "devDependencies": {
     "chai": "^4.0.2",
     "chai-files": "^1.4.0",
-    "fs-extra": "^4.0.2",
     "html-validator": "^3.0.6",
     "mocha": "^3.4.2",
     "mocha-eslint": "^4.0.0",
