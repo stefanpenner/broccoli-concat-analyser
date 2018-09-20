@@ -51,6 +51,23 @@ describe('summarize', function() {
         });
     });
 
+    it('can ignore files', function() {
+      let inputFiles = ['1-test-app.js', '3-vendor.css', '8-test-support.css'];
+      let ignore = 'test-support.css';
+      copyFixtures(inputFiles, inputFixturePath, tmpPath);
+      return summarizeAll(tmpPath, ignore)
+        .then(() => {
+          inputFiles.forEach((inputFile) => {
+            let outputFile = `${inputFile}.out.json`;
+            if (inputFile === '8-test-support.css') {
+              expect(file(path.join(tmpPath, outputFile))).not.to.exist;
+            } else {
+              expect(file(path.join(tmpPath, outputFile))).to.equal(file(path.join(outputFixturePath, outputFile)));
+            }
+          });
+        });
+    });
+
   });
 });
 
