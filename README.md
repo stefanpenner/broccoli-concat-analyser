@@ -21,6 +21,7 @@ produces:
 2. `CONCAT_STATS=true ember s`
 3. `broccoli-concat-analyser ./concat-stats-for`
 4. look at .out.json files in ./concat-stats-for for the process output
+5. open ./concat-stats-for/index.html in any browser for the foamtree interactive map
 
 ## Features
 
