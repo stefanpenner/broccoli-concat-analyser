@@ -4,7 +4,8 @@
 
 ---
 
-produces:
+When using a build chain based on [broccoli-concat](https://github.com/broccolijs/broccoli-concat),
+this tool will show you the size and contents of the concatenated bundles, including:
 
 * raw size
 * uglified size (for JS right now)
@@ -14,7 +15,16 @@ produces:
 
 [Interactive Demo](http://static.iamstef.net/concat-stats-example/)
 
-## usage
+## Ember addon
+
+For usage in an Ember app, [ember-cli-bundle-analyzer](https://github.com/kaliber5/ember-cli-bundle-analyzer)
+wraps this library as an Ember addon and integrates it more tightly into your development workflow. 
+
+See the instructions on its [documentation page](https://github.com/kaliber5/ember-cli-bundle-analyzer).
+
+## Usage
+
+To directly use this tool, follow these steps: 
 
 0. `npm install -g broccoli-concat-analyser`
 1. using broccoli-concat (latest versions)
