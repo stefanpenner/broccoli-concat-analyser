@@ -1,6 +1,5 @@
 'use strict';
 
-const expect = require('chai').expect;
 const getTotal = require('../../lib/get-total');
 
 describe('get-total', function() {
@@ -23,7 +22,7 @@ describe('get-total', function() {
       }
     ];
 
-    expect(getTotal(files)).to.equal(1570);
+    expect(getTotal(files)).toEqual(1570);
   });
 
   it('gets total raw size of all files', function() {
@@ -44,7 +43,7 @@ describe('get-total', function() {
       }
     ];
 
-    expect(getTotal(files, 'raw')).to.equal(8100);
+    expect(getTotal(files, 'raw')).toEqual(8100);
   });
 
   it('ignores non-existing size key', function() {
@@ -63,7 +62,7 @@ describe('get-total', function() {
       }
     ];
 
-    expect(getTotal(files, 'uglified')).to.be.NaN;
+    expect(getTotal(files, 'uglified')).toBeNaN;
   });
 
 });

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`summarize summarize calculates sizes 1`] = `
+"{
+  \\"outputFile\\": \\"/assets/test-app.js\\",
+  \\"files\\": [
+    {
+      \\"relativePath\\": \\"test-app/app.js\\",
+      \\"sizes\\": {
+        \\"raw\\": 624,
+        \\"uglified\\": 377,
+        \\"compressed\\": 120.451057165231
+      }
+    },
+    {
+      \\"relativePath\\": \\"test-app/initializers/app-version.js\\",
+      \\"sizes\\": {
+        \\"raw\\": 524,
+        \\"uglified\\": 313,
+        \\"compressed\\": 100.00313234142521
+      }
+    },
+    {
+      \\"relativePath\\": \\"test-app/initializers/container-debug-adapter.js\\",
+      \\"sizes\\": {
+        \\"raw\\": 606,
+        \\"uglified\\": 430,
+        \\"compressed\\": 137.38449490994518
+      }
+    },
+    {
+      \\"relativePath\\": \\"test-app/initializers/export-application-global.js\\",
+      \\"sizes\\": {
+        \\"raw\\": 1426,
+        \\"uglified\\": 686,
+        \\"compressed\\": 219.17619420516837
+      }
+    },
+    {
+      \\"relativePath\\": \\"test-app/resolver.js\\",
+      \\"sizes\\": {
+        \\"raw\\": 238,
+        \\"uglified\\": 156,
+        \\"compressed\\": 49.841816758026624
+      }
+    },
+    {
+      \\"relativePath\\": \\"test-app/router.js\\",
+      \\"sizes\\": {
+        \\"raw\\": 442,
+        \\"uglified\\": 268,
+        \\"compressed\\": 85.62568519968676
+      }
+    },
+    {
+      \\"relativePath\\": \\"test-app/templates/application.js\\",
+      \\"sizes\\": {
+        \\"raw\\": 406,
+        \\"uglified\\": 324,
+        \\"compressed\\": 103.51761942051684
+      }
+    }
+  ]
+}"
+`;

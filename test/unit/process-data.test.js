@@ -1,6 +1,5 @@
 'use strict';
 
-const expect = require('chai').expect;
 const processData = require('../../lib/process-data');
 
 const broccoliPaths = [
@@ -74,7 +73,7 @@ describe('process-data', function() {
         ]
       };
 
-      expect(processData(json)).to.deep.equal(expected);
+      expect(processData(json)).toEqual(expected);
     });
   });
 });

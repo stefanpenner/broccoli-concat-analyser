@@ -1,10 +1,6 @@
 'use strict';
 
-const chai = require('chai');
-const expect = chai.expect;
 const tmp = require('tmp');
-const chaiFiles = require('chai-files');
-const file = chaiFiles.file;
 const path = require('path');
 const cp = require('child_process');
 const fs = require('fs-extra');
@@ -12,7 +8,6 @@ const validate = require('html-validator');
 const copyFixtures = require('../helpers/copy-fixtures');
 
 const inputFixturePath = 'test/fixtures/input';
-const outputFixturePath = 'test/fixtures/output';
 
 const inputFiles = ['1-test-app.js', '3-vendor.css', '8-test-support.css'];
 
@@ -20,7 +15,9 @@ const originalCwd = process.cwd();
 let tmpPath;
 let outPath;
 
-chai.use(chaiFiles);
+function file(dir) {
+  return fs.readFileSync(dir, 'utf-8');
+}
 
 function run() {
   let stdout = '';
@@ -67,20 +64,20 @@ describe('CLI', function() {
         let exitCode = result.exitCode;
         let stdout = result.stdout;
 
-        expect(exitCode).to.equal(0);
-        expect(stdout).to.contain(`visit file://${outPath}/index.html`);
+        expect(exitCode).toEqual(0);
+        expect(stdout).toContain(`visit file://${outPath}/index.html`);
 
         // write .out.json files
         inputFiles.forEach((inputFile) => {
           let outputFile = `${inputFile}.out.json`;
-          expect(file(path.join(outPath, outputFile))).to.equal(file(path.join(outputFixturePath, outputFile)));
+          expect(file(path.join(outPath, outputFile))).toMatchSnapshot();
         });
 
         // copies static output files
-        expect(file(path.join(outPath, 'index.html'))).to.exist;
+        expect(file(path.join(outPath, 'index.html'))).toBeTruthy();
 
         let data = fs.readFileSync(`${outPath}/index.html`, 'UTF8');
-        expect(data).to.contain('var SUMMARY = {');
+        expect(data).toContain('var SUMMARY = {');
 
         return validate({
           data,
