@@ -11,6 +11,9 @@ const summarize = require('../../lib/summarize');
 const summarizeAll = require('../../lib/summarize-all');
 
 function file(dir) {
+  if (!fs.existsSync(dir)) {
+    return false;
+  }
   return fs.readFileSync(dir, 'utf-8');
 } 
 
@@ -40,9 +43,7 @@ describe('summarize', function() {
       fs.writeFileSync(path.join(tmpPath, inputFile, 'test-app/app.js'), 'foo(;', { flag: 'a' });
 
       let promise = summarize(path.join(tmpPath, `${inputFile}.json`));
-      return expect(promise).to.be.rejected
-        .and.to.eventually.have.property('message')
-        .match(/Unexpected token/);
+      return expect(promise).rejects.toThrow(/Unexpected token/);
     });
 
   });

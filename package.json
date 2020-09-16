@@ -7,7 +7,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "eslint . && jest"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
     "pify": "^5.0.0",
     "terser": "^5.3.1",
     "walk-sync": "^2.2.0",
-    "workerpool": "^2.3.1",
+    "workerpool": "^6.0.0",
     "zlib": "^1.0.5"
   },
   "devDependencies": {
