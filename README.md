@@ -26,12 +26,15 @@ See the instructions on its [documentation page](https://github.com/kaliber5/emb
 
 To directly use this tool, follow these steps: 
 
-0. `npm install -g broccoli-concat-analyser`
-1. using broccoli-concat (latest versions)
+1. `npm install -g broccoli-concat-analyser`
 2. `CONCAT_STATS=true ember s`
 3. `broccoli-concat-analyser ./concat-stats-for`
-4. look at .out.json files in ./concat-stats-for for the process output
-5. open ./concat-stats-for/index.html in any browser for the foamtree interactive map
+4. open ./concat-stats-for/index.html in any browser for the foamtree interactive map
+
+Notes:
+* Be sure to have the latest version of broccoli-concat installed
+* The process output can be found in the .out.json files in the directory: ./concat-stats-for
+* Remove the ./concat-stats-for directory and run step 2 after any changes for an updated output
 
 ## Features
 
