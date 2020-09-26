@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "eslint-plugin-jest": "^23.0.3",
+    "eslint-plugin-jest": "^22.21.0",
     "html-validator": "^3.0.6",
     "jest": "^26.4.2",
     "tmp": "^0.0.33"
