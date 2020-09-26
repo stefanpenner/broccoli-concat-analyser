@@ -34,6 +34,8 @@
     "eslint-plugin-jest": "^24.0.2",
     "html-validator": "^5.1.17",
     "jest": "^26.4.2",
+    "release-it": "^14.0.2",
+    "release-it-lerna-changelog": "^2.4.0",
     "tmp": "^0.2.1"
   },
   "engines": {
@@ -41,5 +43,20 @@
   },
   "volta": {
     "node": "10.22.1"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   }
 }
