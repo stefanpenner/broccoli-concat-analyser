@@ -4,9 +4,6 @@ module.exports = {
   "parserOptions": {
     "ecmaVersion": 6
   },
-  "ignorePatterns": [
-    "test/fixtures/input"
-  ],
   "env": {
     "node": true,
     "es6": true,
