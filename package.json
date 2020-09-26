@@ -34,6 +34,7 @@
     "chai-as-promised": "^7.1.1",
     "chai-files": "^1.4.0",
     "html-validator": "^3.0.6",
+    "jest": "^26.4.2",
     "mocha": "^3.4.2",
     "mocha-eslint": "^4.0.0",
     "tmp": "^0.0.33"
