@@ -1,23 +1,21 @@
 'use strict';
 
-const chai = require('chai');
-const expect = chai.expect;
 const tmp = require('tmp');
-const chaiFiles = require('chai-files');
-const chaiAsPromised = require('chai-as-promised');
-const file = chaiFiles.file;
 const path = require('path');
 const copyFixtures = require('../helpers/copy-fixtures');
 const fs = require('fs-extra');
 
 const inputFixturePath = 'test/fixtures/input';
-const outputFixturePath = 'test/fixtures/output';
 
 const summarize = require('../../lib/summarize');
 const summarizeAll = require('../../lib/summarize-all');
 
-chai.use(chaiFiles);
-chai.use(chaiAsPromised);
+function file(dir) {
+  if (!fs.existsSync(dir)) {
+    return false;
+  }
+  return fs.readFileSync(dir, 'utf-8');
+} 
 
 describe('summarize', function() {
   let tmpPath;
@@ -34,7 +32,7 @@ describe('summarize', function() {
 
       copyFixtures(inputFile, inputFixturePath, tmpPath);
       return summarize(path.join(tmpPath, `${inputFile}.json`))
-        .then(() => expect(file(path.join(tmpPath, outputFile))).to.equal(file(path.join(outputFixturePath, outputFile))));
+        .then(() => expect(file(path.join(tmpPath, outputFile))).toMatchSnapshot());
     });
 
     it('rejects promise on minification errors', function() {
@@ -45,9 +43,7 @@ describe('summarize', function() {
       fs.writeFileSync(path.join(tmpPath, inputFile, 'test-app/app.js'), 'foo(;', { flag: 'a' });
 
       let promise = summarize(path.join(tmpPath, `${inputFile}.json`));
-      return expect(promise).to.be.rejected
-        .and.to.eventually.have.property('message')
-        .match(/Unexpected token/);
+      return expect(promise).rejects.toThrow(/Unexpected token/);
     });
 
   });
@@ -62,7 +58,7 @@ describe('summarize', function() {
         .then(() => {
           inputFiles.forEach((inputFile) => {
             let outputFile = `${inputFile}.out.json`;
-            expect(file(path.join(tmpPath, outputFile))).to.equal(file(path.join(outputFixturePath, outputFile)));
+            expect(file(path.join(tmpPath, outputFile))).toMatchSnapshot();
           });
         });
     });
@@ -76,9 +72,9 @@ describe('summarize', function() {
           inputFiles.forEach((inputFile) => {
             let outputFile = `${inputFile}.out.json`;
             if (inputFile === '8-test-support.css') {
-              expect(file(path.join(tmpPath, outputFile))).not.to.exist;
+              expect(file(path.join(tmpPath, outputFile))).not.toBeTruthy();
             } else {
-              expect(file(path.join(tmpPath, outputFile))).to.equal(file(path.join(outputFixturePath, outputFile)));
+              expect(file(path.join(tmpPath, outputFile))).toMatchSnapshot();
             }
           });
         });

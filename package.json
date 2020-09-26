@@ -7,7 +7,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --recursive test/**/*-test.js"
+    "test": "eslint . && jest"
   },
   "repository": {
     "type": "git",
@@ -26,17 +26,14 @@
     "pify": "^4.0.0",
     "terser": "^3.10.11",
     "walk-sync": "^0.3.1",
-    "workerpool": "^2.3.1",
+    "workerpool": "^5.0.4",
     "zlib": "^1.0.5"
   },
   "devDependencies": {
-    "chai": "^4.0.2",
-    "chai-as-promised": "^7.1.1",
-    "chai-files": "^1.4.0",
+    "eslint": "^7.9.0",
+    "eslint-plugin-jest": "^24.0.2",
     "html-validator": "^3.0.6",
     "jest": "^26.4.2",
-    "mocha": "^3.4.2",
-    "mocha-eslint": "^4.0.0",
     "tmp": "^0.0.33"
   },
   "engines": {

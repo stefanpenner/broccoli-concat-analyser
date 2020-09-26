@@ -1,10 +1,16 @@
 module.exports = {
   "extends": "eslint:recommended",
+  "plugins": ["jest"],
   "parserOptions": {
     "ecmaVersion": 6
   },
+  "ignorePatterns": [
+    "test/fixtures/input"
+  ],
   "env": {
-    "node": true
+    "node": true,
+    "es6": true,
+    "jest": true
   },
   "rules": {
   }
