@@ -1,6 +1,5 @@
 'use strict';
 
-const expect = require('chai').expect;
 const groupFiles = require('../../lib/group-files');
 
 describe('group-files', function() {
@@ -49,7 +48,7 @@ describe('group-files', function() {
       }
     ];
 
-    expect(groupFiles(files)).to.deep.equal(expected);
+    expect(groupFiles(files)).toEqual(expected);
   });
 
 });
