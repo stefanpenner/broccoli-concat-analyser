@@ -20,30 +20,26 @@
   },
   "homepage": "https://github.com/stefanpenner/broccoli-concat-analyser#readme",
   "dependencies": {
-    "filesize": "^3.3.0",
-    "fs-extra": "^4.0.2",
-    "ora": "^0.3.0",
-    "pify": "^4.0.0",
+    "filesize": "^6.1.0",
+    "fs-extra": "^9.0.1",
+    "ora": "^5.1.0",
+    "pify": "^5.0.0",
     "terser": "^3.10.11",
-    "walk-sync": "^0.3.1",
-    "workerpool": "^5.0.4",
+    "walk-sync": "^2.2.0",
+    "workerpool": "^6.0.1",
     "zlib": "^1.0.5"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-jest": "^22.21.0",
-    "html-validator": "^3.0.6",
-    "jest": "^22.4.3",
-    "tmp": "^0.0.33"
-  },
-  "jest": {
-    "verbose": true,
-    "testURL": "http://localhost/"
+    "eslint": "^7.9.0",
+    "eslint-plugin-jest": "^24.0.2",
+    "html-validator": "^5.1.17",
+    "jest": "^26.4.2",
+    "tmp": "^0.2.1"
   },
   "engines": {
-    "node": "6.* || 8.* || >= 10.*"
+    "node": ">= 10.*"
   },
   "volta": {
-    "node": "6.17.1"
+    "node": "10.22.1"
   }
 }
