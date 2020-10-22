@@ -8,56 +8,56 @@ exports[`summarize summarize calculates sizes 1`] = `
       \\"relativePath\\": \\"test-app/app.js\\",
       \\"sizes\\": {
         \\"raw\\": 606,
-        \\"uglified\\": 375,
-        \\"compressed\\": 119.82860520094562
+        \\"uglified\\": 377,
+        \\"compressed\\": 120.451057165231
       }
     },
     {
       \\"relativePath\\": \\"test-app/initializers/app-version.js\\",
       \\"sizes\\": {
         \\"raw\\": 510,
-        \\"uglified\\": 311,
-        \\"compressed\\": 99.37785657998424
+        \\"uglified\\": 313,
+        \\"compressed\\": 100.00313234142521
       }
     },
     {
       \\"relativePath\\": \\"test-app/initializers/container-debug-adapter.js\\",
       \\"sizes\\": {
         \\"raw\\": 590,
-        \\"uglified\\": 428,
-        \\"compressed\\": 136.76438140267928
+        \\"uglified\\": 430,
+        \\"compressed\\": 137.38449490994518
       }
     },
     {
       \\"relativePath\\": \\"test-app/initializers/export-application-global.js\\",
       \\"sizes\\": {
         \\"raw\\": 1377,
-        \\"uglified\\": 684,
-        \\"compressed\\": 218.56737588652481
+        \\"uglified\\": 686,
+        \\"compressed\\": 219.17619420516837
       }
     },
     {
       \\"relativePath\\": \\"test-app/resolver.js\\",
       \\"sizes\\": {
         \\"raw\\": 231,
-        \\"uglified\\": 154,
-        \\"compressed\\": 49.20961386918834
+        \\"uglified\\": 156,
+        \\"compressed\\": 49.841816758026624
       }
     },
     {
       \\"relativePath\\": \\"test-app/router.js\\",
       \\"sizes\\": {
         \\"raw\\": 425,
-        \\"uglified\\": 264,
-        \\"compressed\\": 84.35933806146572
+        \\"uglified\\": 268,
+        \\"compressed\\": 85.62568519968676
       }
     },
     {
       \\"relativePath\\": \\"test-app/templates/application.js\\",
       \\"sizes\\": {
         \\"raw\\": 399,
-        \\"uglified\\": 322,
-        \\"compressed\\": 102.89282899921197
+        \\"uglified\\": 324,
+        \\"compressed\\": 103.51761942051684
       }
     }
   ]
@@ -72,56 +72,56 @@ exports[`summarize summarize-all calculates sizes of all files 1`] = `
       \\"relativePath\\": \\"test-app/app.js\\",
       \\"sizes\\": {
         \\"raw\\": 606,
-        \\"uglified\\": 375,
-        \\"compressed\\": 119.82860520094562
+        \\"uglified\\": 377,
+        \\"compressed\\": 120.451057165231
       }
     },
     {
       \\"relativePath\\": \\"test-app/initializers/app-version.js\\",
       \\"sizes\\": {
         \\"raw\\": 510,
-        \\"uglified\\": 311,
-        \\"compressed\\": 99.37785657998424
+        \\"uglified\\": 313,
+        \\"compressed\\": 100.00313234142521
       }
     },
     {
       \\"relativePath\\": \\"test-app/initializers/container-debug-adapter.js\\",
       \\"sizes\\": {
         \\"raw\\": 590,
-        \\"uglified\\": 428,
-        \\"compressed\\": 136.76438140267928
+        \\"uglified\\": 430,
+        \\"compressed\\": 137.38449490994518
       }
     },
     {
       \\"relativePath\\": \\"test-app/initializers/export-application-global.js\\",
       \\"sizes\\": {
         \\"raw\\": 1377,
-        \\"uglified\\": 684,
-        \\"compressed\\": 218.56737588652481
+        \\"uglified\\": 686,
+        \\"compressed\\": 219.17619420516837
       }
     },
     {
       \\"relativePath\\": \\"test-app/resolver.js\\",
       \\"sizes\\": {
         \\"raw\\": 231,
-        \\"uglified\\": 154,
-        \\"compressed\\": 49.20961386918834
+        \\"uglified\\": 156,
+        \\"compressed\\": 49.841816758026624
       }
     },
     {
       \\"relativePath\\": \\"test-app/router.js\\",
       \\"sizes\\": {
         \\"raw\\": 425,
-        \\"uglified\\": 264,
-        \\"compressed\\": 84.35933806146572
+        \\"uglified\\": 268,
+        \\"compressed\\": 85.62568519968676
       }
     },
     {
       \\"relativePath\\": \\"test-app/templates/application.js\\",
       \\"sizes\\": {
         \\"raw\\": 399,
-        \\"uglified\\": 322,
-        \\"compressed\\": 102.89282899921197
+        \\"uglified\\": 324,
+        \\"compressed\\": 103.51761942051684
       }
     }
   ]
@@ -165,56 +165,56 @@ exports[`summarize summarize-all can ignore files 1`] = `
       \\"relativePath\\": \\"test-app/app.js\\",
       \\"sizes\\": {
         \\"raw\\": 606,
-        \\"uglified\\": 375,
-        \\"compressed\\": 119.82860520094562
+        \\"uglified\\": 377,
+        \\"compressed\\": 120.451057165231
       }
     },
     {
       \\"relativePath\\": \\"test-app/initializers/app-version.js\\",
       \\"sizes\\": {
         \\"raw\\": 510,
-        \\"uglified\\": 311,
-        \\"compressed\\": 99.37785657998424
+        \\"uglified\\": 313,
+        \\"compressed\\": 100.00313234142521
       }
     },
     {
       \\"relativePath\\": \\"test-app/initializers/container-debug-adapter.js\\",
       \\"sizes\\": {
         \\"raw\\": 590,
-        \\"uglified\\": 428,
-        \\"compressed\\": 136.76438140267928
+        \\"uglified\\": 430,
+        \\"compressed\\": 137.38449490994518
       }
     },
     {
       \\"relativePath\\": \\"test-app/initializers/export-application-global.js\\",
       \\"sizes\\": {
         \\"raw\\": 1377,
-        \\"uglified\\": 684,
-        \\"compressed\\": 218.56737588652481
+        \\"uglified\\": 686,
+        \\"compressed\\": 219.17619420516837
       }
     },
     {
       \\"relativePath\\": \\"test-app/resolver.js\\",
       \\"sizes\\": {
         \\"raw\\": 231,
-        \\"uglified\\": 154,
-        \\"compressed\\": 49.20961386918834
+        \\"uglified\\": 156,
+        \\"compressed\\": 49.841816758026624
       }
     },
     {
       \\"relativePath\\": \\"test-app/router.js\\",
       \\"sizes\\": {
         \\"raw\\": 425,
-        \\"uglified\\": 264,
-        \\"compressed\\": 84.35933806146572
+        \\"uglified\\": 268,
+        \\"compressed\\": 85.62568519968676
       }
     },
     {
       \\"relativePath\\": \\"test-app/templates/application.js\\",
       \\"sizes\\": {
         \\"raw\\": 399,
-        \\"uglified\\": 322,
-        \\"compressed\\": 102.89282899921197
+        \\"uglified\\": 324,
+        \\"compressed\\": 103.51761942051684
       }
     }
   ]
