@@ -23,11 +23,10 @@
     "filesize": "^6.1.0",
     "fs-extra": "^9.0.1",
     "ora": "^5.1.0",
-    "pify": "^5.0.0",
     "terser": "^5.3.7",
     "walk-sync": "^2.2.0",
     "workerpool": "^6.0.2",
-    "zlib": "^1.0.5"
+    "pako": "^1.0.11"
   },
   "devDependencies": {
     "eslint": "^7.9.0",
